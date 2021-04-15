@@ -1,0 +1,72 @@
+
+
+
+    <a matLine href="...">
+        <mat-card>
+        <ag-grid-angular
+        style="width: auto; height: 400px;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+    
+    >
+    </ag-grid-angular>
+</mat-card>
+    </a>
+
+   <div class="container-fluid d-flex mt-5">
+    <div class="d-flex flex-wrap bd-highlight m-1"  *ngFor="let well of wellData">
+          <mat-card style="width: 150px;">
+              <mat-card-title>{{well.name}}</mat-card-title>
+              <mat-list>
+                <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td scope="row">Tpsi</td>
+                        <td>{{ well.tpsi }}</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Cpsi</td>
+                        <td>{{ well.cpsi }}</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Flow</td>
+                        <td colspan="2">{{ well.flow }}</td>
+                       
+                      </tr>
+                    </tbody>
+                  </table>
+              </mat-list>
+          </mat-card>
+    </div>
+</div>
+
+<div class="container-fluid d-flex">
+    <div   class="d-flex flex-wrap bd-highlight m-1"  *ngFor="let tank of tankData">
+          <mat-card style="width: 150px;">
+              <mat-card-title>{{tank.name}}</mat-card-title>
+              <mat-list>
+                <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td scope="row">Oil</td>
+                        <td>{{ tank.oil }}</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Water</td>
+                        <td>{{ tank.water }}</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">temp</td>
+                        <td colspan="2">{{ tank.temp }}</td>
+                       
+                      </tr>
+                    </tbody>
+                  </table>
+
+              </mat-list>
+          </mat-card>
+    </div>
+</div>
+
+<a routerLink="grid">Grid Module</a>
