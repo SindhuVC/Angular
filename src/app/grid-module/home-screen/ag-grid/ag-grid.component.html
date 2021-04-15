@@ -1,0 +1,6 @@
+<button *ngIf="href !== '/grid'" class="btn btn-primary m-1" routerLink="/grid/">Back</button>
+<mat-card>
+    <ag-grid-angular style="width: auto; height: 400px;" class="ag-theme-alpine" [rowData]="rowData"
+        [columnDefs]="columnDefs">
+    </ag-grid-angular>
+</mat-card>

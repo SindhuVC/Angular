@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgGridComponent } from './ag-grid/ag-grid.component';
-import { GridModuleModule } from './grid-module.module';
-import { WellDataComponent } from './well-data/well-data.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { AgGridComponent } from './home-screen/ag-grid/ag-grid.component';
+import { WellDataComponent } from './home-screen/well-data/well-data.component';
 
 const routes: Routes = [
-
   {
-    path:"",
-    component:WellDataComponent
+    path: '',
+    component: HomeScreenComponent
   },
   {
-    path:"ag",
-    component:AgGridComponent
+    path: 'wellInfo',
+    component: WellDataComponent
+  },
+  {
+    path: 'historicalData',
+    component: AgGridComponent
   }
 ];
 
